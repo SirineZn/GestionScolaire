@@ -64,5 +64,14 @@ public class Etudiant {
         public void setEmail(String email) {
           this.email = email;
         }
-      } 
+        
+       public Etudiant(String cin, String nom_etud, String prenom_etud, int age, String nom_spec, String email) {
+        this.cin = cin;
+        this.nom_etud = nom_etud;
+        this.prenom_etud = prenom_etud;
+        this.age = age;
+        this.nom_spec = nom_spec;
+        this.email = email;
+    }
+}
 

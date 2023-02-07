@@ -37,4 +37,9 @@ public class Specialite {
     public void setTabMatieres(String[] tab_matieres) {
       this.tab_matieres = tab_matieres;
     }
+  public Specialite(int id_spec, String nom_spec, String[] tab_matieres) {
+        this.id_spec = id_spec;
+        this.nom_spec = nom_spec;
+        this.tab_matieres = tab_matieres;
+    }
 }

@@ -46,4 +46,10 @@ public class Matiere {
   public void setCoefficient(float coefficient) {
     this.coefficient = coefficient;
   }
+  public Matiere(int id_mat, String nom_mat, float note, int coefficient) {
+        this.id_mat = id_mat;
+        this.nom_mat = nom_mat;
+        this.note = note;
+        this.coefficient = coefficient;
+    }
 }
