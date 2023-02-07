@@ -58,4 +58,33 @@ public class Matiere {
   public String toString() {
     return "Matieres[Id_mat=" + Id_mat + ", Nom_mat=" + Nom_mat + ",note=" + note + ",coefficient=" + coefficient + "]";
   }
+
+
+
+
+  Matiere [] tabMatiere   = new Matiere  [50]  ;
+public void AjoutMatiere  (Matiere   m ){
+  if (existeMatiere(m) ==true){
+    tabMatiere [tabMatiere.length] = m;
+  }
+  else {
+    System.out.println("cette Matiere   existe déja");
+  }
+}
+public void deleteMatiere  (Matiere   m){
+for (int i=0;i<tabMatiere  .length;i++){
+  if (tabMatiere[i]== m ){
+    tabMatiere  [i]=tabMatiere  [i+1];
+  }
+}
+}
+public boolean existeMatiere  (Matiere m){
+boolean existe =false;
+for(int i=0;i<=tabMatiere  .length;i++){
+  if(tabMatiere  [i].getIdMat()==m.getIdMat()){
+    existe=true;
+  }
+}
+return existe;
+}
 }
