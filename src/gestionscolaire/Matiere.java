@@ -10,46 +10,52 @@ package gestionscolaire;
  * @author sirine
  */
 public class Matiere {
-    private int Id_mat;
+  private int Id_mat;
   private String Nom_mat;
   private float note;
   private float coefficient;
-  
+
   public int getIdMat() {
     return Id_mat;
   }
-  
+
   public void setIdMat(int Id_mat) {
     this.Id_mat = Id_mat;
   }
-  
+
   public String getNomMat() {
     return Nom_mat;
   }
-  
+
   public void setNomMat(String Nom_mat) {
     this.Nom_mat = Nom_mat;
   }
-  
+
   public float getNote() {
     return note;
   }
-  
+
   public void setNote(float note) {
     this.note = note;
   }
-  
+
   public float getCoefficient() {
     return coefficient;
   }
-  
+
   public void setCoefficient(float coefficient) {
     this.coefficient = coefficient;
   }
+
   public Matiere(int id_mat, String nom_mat, float note, int coefficient) {
-        this.id_mat = id_mat;
-        this.nom_mat = nom_mat;
-        this.note = note;
-        this.coefficient = coefficient;
-    }
+    this.id_mat = id_mat;
+    this.nom_mat = nom_mat;
+    this.note = note;
+    this.coefficient = coefficient;
+  }
+
+  @Override
+  public String toString() {
+    return "Matieres[Id_mat=" + Id_mat + ", Nom_mat=" + Nom_mat + ",note=" + note + ",coefficient=" + coefficient + "]";
+  }
 }
