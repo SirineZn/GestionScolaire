@@ -39,7 +39,7 @@ public class Specialite {
   }
 
   public Specialite(int id_spec, String nom_spec, String[] tab_matieres) {
-    this.id_spec = id_spec;
+    this.Id_spec = id_spec;
     this.nom_spec = nom_spec;
     this.tab_matieres = tab_matieres;
   }
@@ -48,4 +48,39 @@ public class Specialite {
   public String toString() {
     return "Specialité[Id_spec=" + Id_spec + ", nom_spec=" + nom_spec + ",tab_matieres=" + tab_matieres + "]";
   }
+  Specialite [] tabSpecialite  = new Specialite  [10]  ;
+
+
+
+
+public void AjoutSpecialite  (Specialite  s ){
+  if (existeSpecialite(s) ==false){
+    tabSpecialite [tabSpecialite.length]= s;
+  }
+  else {
+    System.out.println("ce Specialite  existe déja");
+  }
+   
+
+
+
+
 }
+public void deleteSpecialite (Specialite  s){
+for (int i=0;i<tabSpecialite .length;i++){
+  if (tabSpecialite[i]== s ){
+    tabSpecialite [i]=tabSpecialite [i+1];
+  }
+}
+
+}
+public boolean existeSpecialite (Specialite s){
+  boolean existe =false;
+  for(int i=0;i<=tabSpecialite .length;i++){
+    if(tabSpecialite [i].getIdSpec()==s.getIdSpec()){
+      existe=true;
+    }
+    
+  }
+  return existe;
+}}  

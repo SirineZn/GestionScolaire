@@ -48,8 +48,8 @@ public class Matiere {
   }
 
   public Matiere(int id_mat, String nom_mat, float note, int coefficient) {
-    this.id_mat = id_mat;
-    this.nom_mat = nom_mat;
+    this.Id_mat = id_mat;
+    this.Nom_mat = nom_mat;
     this.note = note;
     this.coefficient = coefficient;
   }

@@ -79,5 +79,38 @@ public class Etudiant {
     return "Etudiant[cin=" + cin + ", nom_etud=" + nom_etud + ",prenom_etud=" + prenom_etud + ",email=" + email
         + ",nom_spec=" + nom_spec + "]";
   }
+  Etudiant [] tabEtudiant = new Etudiant[50]  ;
+
+
+  public void AjoutEtudiant (Etudiant e ){
+    
+    if (existeEtudiant(e)==false){
+      tabEtudiant[tabEtudiant.length ]= e;
+    }
+    else {
+      System.out.println("cet étudiant existe déja");
+    }   
+
+
+  }
+public void deleteEtudiant (Etudiant e){
+  for (int i=0;i<tabEtudiant.length;i++){
+    if (tabEtudiant[i]== e ){
+      tabEtudiant[i]=tabEtudiant[i+1];
+    }
+
+
+  }
+}
+public boolean existeEtudiant(Etudiant e){
+  boolean existe =false;
+  for(int i=0;i<=tabEtudiant.length;i++){
+    if(tabEtudiant[i].getCin()==e.getCin()){
+      existe=true;
+    }
+    
+  }
+  return existe;
+}
 
 }
