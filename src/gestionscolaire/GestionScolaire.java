@@ -16,6 +16,7 @@ public class GestionScolaire {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        //ceci est une classe pour gérer une scolarité 
     }
     
 }
